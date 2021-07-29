@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- action that opens the views -->
+  <record id='camp_action' model='ir.actions.act_window'>
+    <field name="name">Name</field>
+    <field name="res_model">camp</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- menu items  -->
+  <menuitem name="Camps" id="camp_menu" parent="base_menu" action="camp_action" />
+
+  <!-- custom form view -->
+  <record id='camp_view_form' model='ir.ui.view'>
+    <field name="name">Camp Form</field>
+    <field name="model">camp</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <group>
+            <group>
+              <field name='name' />
+              <field name="start_date" />
+              <field name="end_date" />
+              <field name="age_min" />
+              <field name="age_max" />
+              <field name="description" />
+            </group>
+            <group>
+              <field name="location_id" widget="many2one_tags" />
+              <field name="camp_type_id" widget="many2one_tags" />
+            </group>
+            <group>
+              <!-- <field name="attendee_ids" widget="one2many_tags" /> -->
+            </group>
+          </group>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <!-- custom tree (list) view -->
+  <record id='camp_view_tree' model='ir.ui.view'>
+    <field name="name"> Camp List</field>
+    <field name="model">camp</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="start_date" />
+        <field name="end_date" />
+        <field name="camp_type_id" />
+        <field name="location_id" />
+      </tree>
+    </field>
+  </record>
+
+  <!-- custom search optioons -->
+  <record id='camp_view_search' model='ir.ui.view'>
+    <field name="name"> Camp Search</field>
+    <field name="model">camp</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="start_date" />
+        <field name="end_date" />
+        <field name="camp_type_id" />
+        <field name="location_id" />
+        <field name="description" />
+      </search>
+    </field>
+  </record>
+
+
+</odoo>

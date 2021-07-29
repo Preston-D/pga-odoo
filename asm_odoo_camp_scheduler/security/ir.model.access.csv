@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+asm_location,location defualt,model_location,,1,0,0,0
+asm_location_camp_admin,location_camp_admin,model_location,group_camp_admin,1,1,1,1
+
+asm_camp,camp defualt,model_camp,,1,0,0,0
+asm_camp_camp_admin,camp_camp_admin,model_camp,group_camp_admin,1,1,1,1
+
+asm_attendee,attendee defualt,model_attendee,,1,0,0,0
+asm_attendee_camp_admin,attendee_camp_admin,model_attendee,group_camp_admin,1,1,1,1
+
+asm_day,day defualt,model_day,,1,0,0,0
+asm_day_camp_admin,day_camp_admin,model_day,group_camp_admin,1,1,1,1
