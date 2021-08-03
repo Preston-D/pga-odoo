@@ -18,11 +18,11 @@ class Prismic(http.Controller):
         for camp in camps.read(['name', 'start_date', 'end_date', 'description', 'age_min', 'age_max']):
             _logger.critical(camp)
             camp_sku = {
-                'id': camp['id'],
+                'id': str(camp['id']),
                 'title': camp['name'],
-                'description': camp['description'],
+                'description': str(camp['description']),
                 'image_url': 'http://...',
-                'last_update': time.time(),
+                'last_update': int(time.time()),
                 'blob': {
                     'sku': camp['id'],
                     'title': camp['name'],
