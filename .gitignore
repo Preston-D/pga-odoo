@@ -2,3 +2,4 @@
 asm_odoo_camp_scheduler/__pycache__/__init__.cpython-37.pyc
 *.pyc
 .DS_Store
+*.tmp

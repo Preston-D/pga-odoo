@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 
 
 class Prismic(http.Controller):
-    @http.route('/pga-manager/prismic', type='http', auth='none', cors='*', csrf='False')
+    @http.route('/pga-manager/prismic', type='http', auth='none', cors='*', csrf='True')
     def prismic(self, **kw):
         result_size = 0
         results = []
